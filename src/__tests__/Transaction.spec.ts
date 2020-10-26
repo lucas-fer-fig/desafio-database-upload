@@ -197,7 +197,7 @@ describe('Transaction', () => {
   });
 
   it('should be able to import transactions', async () => {
-    /* const transactionsRepository = getRepository(Transaction);
+    const transactionsRepository = getRepository(Transaction);
     const categoriesRepository = getRepository(Category);
 
     const importCSV = path.resolve(__dirname, 'import_template.csv');
@@ -235,6 +235,6 @@ describe('Transaction', () => {
           type: 'outcome',
         }),
       ]),
-    ); */
+    );
   });
 });
