@@ -87,7 +87,9 @@ transactionsRouter.post(
 
     const createTransactions = new CreateTransactionService();
 
-    oneDataLine.forEach(data => createTransactions.execute({ ...data }));
+    for (const data of oneDataLine) {
+      await createTransactions.execute({ ...data });
+    }
 
     return response.json({ ok: oneDataLine });
   },
